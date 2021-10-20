@@ -6,4 +6,14 @@ This module is for a browser plugin «[Live Alert Browser Page](https://live-ale
 
 [live-alert-browser-page.com](https://live-alert-browser-page.com/)
 
+## Formaters
+* live-alert-bp-formatter-eslint
+* live-alert-bp-formatter-jshint
+* live-alert-bp-formatter-postcss
+* live-alert-bp-formatter-sass
+* live-alert-bp-formatter-stylelint
+
 Editing...
+
+
+
