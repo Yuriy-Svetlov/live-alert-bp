@@ -16,6 +16,7 @@ node live-alert-bp.js
 ```
 
 4. Open the browser plugin
+
    4.1. Go to 'Setting'
    4.2. Enter in the fields 'Server Host' `127.0.0.1` and 'Port' `8080`. Click the "Save" button. Back to the main menu.
    4.3. Go to **Reload Notification**. Turn on 'Visual notification' and 'Sound notification'. Back to the main menu.
