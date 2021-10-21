@@ -24,7 +24,7 @@ npm i live-alert-bp --save-dev
 
 ###  How to use for
 
-* [NodeJs](https://github.com/semiromid/live-alert-bp/documentation/nodejs.md) (To better understand how to use this tool)
+* [NodeJs](https://github.com/semiromid/live-alert-bp/blob/master/documentation/nodejs.md) (To better understand how to use this tool)
 * Gulp
 * Webpack
 * Grunt
