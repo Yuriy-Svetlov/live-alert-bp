@@ -10,7 +10,9 @@ When you already have the browser plugin and this npm module is installed, you n
 ```shell
 npm install
 ```
+
 3. Double-clisk on **start.bat** or run in console 
+
 ```shell
 node live-alert-bp.js
 ```
