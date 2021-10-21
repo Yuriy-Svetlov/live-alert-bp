@@ -3,7 +3,7 @@
 When you already have the browser plugin and this npm module is installed, you need to do the following.
 
 ## Steps
-1. Download or copy [exmaple-nodejs-1](https://github.com/semiromid/live-alert-bp/documentation/examples/nodejs/1)
+1. Download or copy [exmaple-nodejs-1](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/nodejs/1)
 
 2. Go to the directory with the example and run the command in console: 
 
