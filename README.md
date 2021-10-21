@@ -12,19 +12,19 @@ You may also want to use:
 
 ## Installs
 
-####  Step - 1
+###  Step - 1
 You need to install the browser plugin [Live Alert Browser Page](https://live-alert-browser-page.com/) if you have not already installed it for:
   * [Google Chrome](#)
   * Firefox (not yet available)
   
-####  Step - 2
+###  Step - 2
 ```shell
 npm i live-alert-bp --save-dev
 ```
 
-###  How to use for
+##  How to use for
 
-* [NodeJs](https://github.com/semiromid/live-alert-bp/tree/master/documentation/nodejs) (To better understand how to use this tool)
+* [NodeJs](https://github.com/semiromid/live-alert-bp/tree/master/documentation/nodejs) (To better understand how to use this tool, it is recommended that you get started.)
 * Gulp
 * Webpack
 * Grunt
