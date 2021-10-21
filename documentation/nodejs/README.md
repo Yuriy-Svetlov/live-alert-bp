@@ -16,6 +16,9 @@ npm install
 ```shell
 node live-alert-bp.js
 ```
+In the console you should see the following message:
+
+> Server started | host: 127.0.0.1 | port: 8080
 
 4. Open the browser plugin
 
