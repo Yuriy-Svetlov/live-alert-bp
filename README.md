@@ -13,6 +13,7 @@ You may also want to use:
 ## Installs
 
 1. **Step - 1** 
+
 You need to install the browser plugin [Live Alert Browser Page](https://live-alert-browser-page.com/) if you have not already installed it for:
   * [Google Chrome](#)
   * Firefox (not yet available)
