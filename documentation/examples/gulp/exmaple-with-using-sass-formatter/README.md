@@ -1,6 +1,6 @@
-# Example without using a formatter (live-alert-bp)
+# Example with using the sass formatter (live-alert-bp)
 
-**1.** Download or copy [exmaple-without-using-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/1)
+**1.** Download or copy [exmaple-with-using-sass-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
 
 **2.** Go to the directory with `gulpfile.js` and run the command in console: 
 
@@ -19,7 +19,7 @@ In the console you should see the following message:
 
 **4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
 
-**5.** Change a file `.sass` (make a syntax errora).
+**5.** Change a file `.sass` (make a syntax error).
 
 **Congratulation!**
 

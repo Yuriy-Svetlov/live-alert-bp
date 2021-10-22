@@ -1,4 +1,4 @@
-# How to use with Gulp live-alert-bp
+# How to use live-alert-bp with Gulp 
 
 **Note**: You also can use module for Gulp [gulp-live-alert-bp](https://github.com/semiromid/gulp-live-alert-bp) instead of 
 [live-alert-bp](https://github.com/semiromid/live-alert-bp).
@@ -7,4 +7,6 @@
 
 ## Examples
 
-1. [Without using a formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/1)
+1. [Without using a formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-without-using-formatter)
+
+2. [With using the `Sass` formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
