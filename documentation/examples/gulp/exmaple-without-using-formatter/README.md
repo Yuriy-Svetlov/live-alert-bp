@@ -1,6 +1,6 @@
 # Example without using a formatter (live-alert-bp)
 
-**1.** Download or copy [exmaple-without-using-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
+**1.** Download or copy [exmaple-without-using-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-without-using-formatter)
 
 **2.** Go to the directory with `gulpfile.js` and run the command in console: 
 
