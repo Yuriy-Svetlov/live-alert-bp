@@ -38,7 +38,7 @@ liveAlert.run();
 console.log('Within 10 seconds, you need to connect to this server using the browser plugin «Live Alert Browser Page».');
 
 setTimeout(function(){
-  // Open Live-Alert-BP panel  
+  // Open Live-Alert-BP panel (Without using a formatter)  
   liveAlert.open([
     { label: 'My label-1', message: 'My message-1.'},
     { label: 'My label-2', message: 'My message-2.'},
