@@ -12,17 +12,56 @@ You may also want to use:
 
 ## Installs
 
-###  Step - 1
+1. **Step - 1** 
 You need to install the browser plugin [Live Alert Browser Page](https://live-alert-browser-page.com/) if you have not already installed it for:
   * [Google Chrome](#)
   * Firefox (not yet available)
   
-###  Step - 2
+1. **Step - 2**
 ```shell
 npm i live-alert-bp --save-dev
 ```
 
-##  How to use for
+##  How to use
+
+```javascript
+const liveAlertBP = require("live-alert-bp");
+const liveAlert = new liveAlertBP({
+  host: '127.0.0.1',
+   port: '8080'
+});
+
+// Run Server
+liveAlert.run();
+
+console.log('Within 10 seconds, you need to connect to this server using the browser plugin «Live Alert Browser Page».');
+
+setTimeout(function(){
+  // Open Live-Alert-BP panel  
+  liveAlert.open([
+    { label: 'My label-1', message: 'My message-1.'},
+    { label: 'My label-2', message: 'My message-2.'},
+  ]);
+
+  closeLiveAlert(3000);      
+}, 10000);
+
+
+
+function closeLiveAlert(milliseconds) {
+  setTimeout(function(){
+    liveAlert.resetError();
+
+    // Close Live-Alert-BP panel
+    liveAlert.close();
+
+    // Push notification. Used for success notification. (Reload-Notification must be enabled)
+    liveAlert.reloadNotification();     
+  }, milliseconds);
+}
+```
+
+##  Examples:
 
 * [NodeJs](https://github.com/semiromid/live-alert-bp/tree/master/documentation/nodejs) (To better understand how to use this tool, it is recommended that you get started.)
 * Gulp
