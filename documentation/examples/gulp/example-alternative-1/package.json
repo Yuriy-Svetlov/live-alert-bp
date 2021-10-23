@@ -1,5 +1,5 @@
 {
-  "name": "exmaple-with-using-sass-formatter",
+  "name": "example-alternative-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.1.0",
-    "live-alert-bp": "^1.0.0",
+    "live-alert-bp": "^1.0.1",
     "live-alert-bp-formatter-sass": "^1.0.0",
     "postcss": "7.0.32"
   }

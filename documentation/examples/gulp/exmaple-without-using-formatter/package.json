@@ -1,5 +1,5 @@
 {
-  "name": "live-alert-bp-example-gulp-1",
+  "name": "exmaple-without-using-formatter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-sass": "4.1.0",
-    "live-alert-bp": "1.0.0",
+    "live-alert-bp": "^1.0.1",
     "postcss": "7.0.32"
   }
 }

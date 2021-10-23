@@ -12,8 +12,6 @@
   <body>
     <h1>Example of using live-alert-bp for Gulp</h1>
 
-    The example shows how this tool can be used without formatters.
-
     <div class="bl1">bl1</div>
     <div class="bl2">bl2</div>
     <div class="bl3">bl3</div>

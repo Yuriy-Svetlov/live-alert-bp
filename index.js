@@ -9,38 +9,39 @@
 'use strict';
 
 const
-	fs = require('fs'),
-	https = require('https'),
-	WebSocket = require('ws'),
-	COLOR__YELLOW = '\x1b[93m%s\x1b[0m',
-	COLOR__RED = '\x1b[31m%s\x1b[0m';
+  fs = require('fs'),
+  https = require('https'),
+  WebSocket = require('ws'),
+  COLOR__YELLOW = '\x1b[93m%s\x1b[0m',
+  COLOR__RED = '\x1b[31m%s\x1b[0m';
 
-var debug = false;
+var 
+  debug = false;
 
 
 class Server{
 
-	constructor(options){
-		if(options.port === undefined){
-			this.port = 8080;
-		}else{
-			this.port = options.port;
-		}
+  constructor(options){
+	if(options.port === undefined){
+	  this.port = 8080;
+	}else{
+		this.port = options.port;
+	}
 
-		if(options.host === undefined){
-			this.host = '127.0.0.1';
-		}else{
-			this.host = options.host;
-		}		
+	if(options.host === undefined){
+		this.host = '127.0.0.1';
+	}else{
+		this.host = options.host;
+	}		
 
-		this.wss = null;
+	  this.wss = null;
 		this.ssl = options.ssl;
 		this.error = false;
 		debug = options.debug;
-	}
+  }
 
 
-	run(){
+  run(){
 		if(this.ssl !== undefined && this.ssl.enable === true){
 			/* 
 			    # tls_createsecurecontext_options
@@ -64,8 +65,8 @@ class Server{
 			this.wss = new WebSocket.Server({ host: this.host, port: this.port });
 			console.log(" Server started | host: "+this.host+" | port: "+this.port);
 		}
-		
-		
+	
+	
 		if(debug === true){
 			this.wss.on('connection', function connection(ws) {
 			 	console.log(' New connection');
@@ -74,8 +75,8 @@ class Server{
 				});
 			});
 		}
-		
 	
+
 		function validationSSL_options(options){
 			if(options === undefined){
 				console.log(COLOR__RED, '[ssl_options] is undefined.');
@@ -102,13 +103,13 @@ class Server{
 				return false;
 			}
 		}
-	}
+  }
 
 
-	close(){
+  close(){
 		if(this.hasError() != true && this.wss != undefined){
-		     this.wss.clients.forEach(function each(client) {
-		      	if(client.readyState === WebSocket.OPEN) {
+      this.wss.clients.forEach(function each(client) {
+      	if(client.readyState === WebSocket.OPEN) {
 					client.send(JSON.stringify({
 						action: 'live_alert_close'
 					}));
@@ -116,34 +117,36 @@ class Server{
 					if(debug === true){
 						console.log('[Live Alert-BP] ' + getDateTime());
 					}
-		    	     }
-		     });	
+    	  }
+      });	
 		}			
-	}
+  }
 
 
-	open(message){
-		this.error = true;
+  open(message){
+		if(message.length > 0){
+			this.error = true;
 
-		if(this.wss != undefined){
-		     this.wss.clients.forEach(function each(client) {
-		      	if(client.readyState === WebSocket.OPEN) {
-					client.send(JSON.stringify({
-						action: 'live_alert',
-						message: message
-					}));
+			if(this.wss != undefined){
+			  this.wss.clients.forEach(function each(client) {
+			    if(client.readyState === WebSocket.OPEN) {
+						client.send(JSON.stringify({
+							action: 'live_alert',
+							message: message
+						}));
 
-		        	     console.log('[Live Alert] ' + getDateTime());
-		    	     }
-		     });	
+			      console.log('[Live Alert] ' + getDateTime());
+			    }
+			  });	
+			}
 		}		
-	}
+  }
 
 
-	reloadNotification(){
+  reloadNotification(){
 		if(this.hasError() != true && this.wss != undefined){
-		     this.wss.clients.forEach(function each(client) {
-		      	if(client.readyState === WebSocket.OPEN) {
+	    this.wss.clients.forEach(function each(client) {
+	      if(client.readyState === WebSocket.OPEN) {
 					client.send(JSON.stringify({
 						action: 'reload_notification_push'
 					}));
@@ -151,19 +154,20 @@ class Server{
 					if(debug === true){
 						console.log('[Live Alert-BP] (reloadNotification) ' + getDateTime());
 					}
-		    	     }
-		     });	
+	    	}
+	    });	
 		}
-	}
+  }
 
 
-	resetError(){
+  resetError(){
 		this.error = false;
-	}
+  }
 
-	hasError(){
+
+  hasError(){
 		return this.error;
-	}
+  }
 
 }
 
@@ -171,39 +175,39 @@ module.exports = Server;
 
 
 function getFileData(path){
-	if(path === undefined){
+  if(path === undefined){
 		return null;
-	}
+  }
 
-	if(fs.existsSync(path) === false){
+  if(fs.existsSync(path) === false){
 		return null;
-	}
+  }
 
-	return fs.readFileSync(path);
+  return fs.readFileSync(path);
 }
 
 
 function getDateTime(){
-    const 
+  const 
     now = new Date();
 
-    let
+  let
     hour = now.getHours(),
     minute = now.getMinutes(),
     second = now.getSeconds(), 
     milliseconds = now.getMilliseconds();
 
-    if(hour.toString().length == 1) {
-         hour = '0'+hour;
-    }
+  if(hour.toString().length == 1) {
+    hour = '0'+hour;
+  }
 
-    if(minute.toString().length == 1) {
-         minute = '0'+minute;
-    }
+  if(minute.toString().length == 1) {
+    minute = '0'+minute;
+  }
 
-    if(second.toString().length == 1) {
-         second = '0'+second;
-    }   
+  if(second.toString().length == 1) {
+    second = '0'+second;
+  }   
 
-    return hour+':'+minute+':'+second+':'+milliseconds;
+  return hour+':'+minute+':'+second+':'+milliseconds;
 }

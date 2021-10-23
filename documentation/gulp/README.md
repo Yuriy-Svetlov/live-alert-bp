@@ -10,3 +10,5 @@
 1. [Without using a formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-without-using-formatter)
 
 2. [With using the `Sass` formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
+
+3. [Alternative Example - 1 with using Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-alternative-1)

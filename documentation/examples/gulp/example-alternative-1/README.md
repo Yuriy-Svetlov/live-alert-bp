@@ -1,6 +1,8 @@
-# Example with using the Sass formatter (live-alert-bp)
+# Alternative Example - 1 with using Gulp (live-alert-bp)
 
-**1.** Download or copy [exmaple-with-using-sass-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
+This example shows how to use this plugin differently with Gulp.
+
+**1.** Download or copy [example-alternative-1](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-alternative-1)
 
 **2.** Go to the directory with `gulpfile.js` and run the command in console: 
 

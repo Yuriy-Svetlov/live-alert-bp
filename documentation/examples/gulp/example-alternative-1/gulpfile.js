@@ -24,16 +24,12 @@ function css() {
     .pipe(postcss([
         cssnano({zindex: false, reduceIdents: false})
     ]))     
-    .pipe(gulp.dest(cssDest));
-}
-
-
-function liveAlertCSS(cb){
-    liveAlert.close();
-    liveAlert.reloadNotification();
-    liveAlert.resetError();
-
-  cb();
+    .pipe(gulp.dest(cssDest))
+    .on("end", function (err) {
+        liveAlert.close();
+        liveAlert.reloadNotification();
+        liveAlert.resetError();
+    });    
 }
 
 
@@ -45,6 +41,7 @@ function onError(err){
       liveAlert.open(
         liveAlertFormatterSass(err)
       );
+      
     }
   }
 
@@ -55,10 +52,9 @@ function onError(err){
 function watch(){
   liveAlert.run();
 
-  gulp.watch(cssWatch, gulp.series(css, liveAlertCSS));
+  gulp.watch(cssWatch, gulp.series(css));
 }
 
 
 exports.css = css;
 exports.watch = watch;
-exports.liveAlertCSS = liveAlertCSS;
