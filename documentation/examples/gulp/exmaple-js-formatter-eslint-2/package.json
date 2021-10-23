@@ -1,0 +1,21 @@
+{
+  "name": "exmaple-js-formatter-eslint-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Somin Yuri",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "1.2.1",
+    "live-alert-bp": "^1.0.0",
+    "live-alert-bp-formatter-eslint": "^1.0.0",
+    "webpack": "^5.59.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {}
+}
