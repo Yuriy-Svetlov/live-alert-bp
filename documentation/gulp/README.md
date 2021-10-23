@@ -12,3 +12,5 @@
 2. [With using the `Sass` formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
 
 3. [Alternative Example - 1 with using Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-alternative-1)
+
+4. [Example - 1 with using JS and ESlint](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-1)

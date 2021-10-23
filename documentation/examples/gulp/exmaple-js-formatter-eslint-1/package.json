@@ -1,0 +1,27 @@
+{
+  "name": "exmaple-js-formatter-eslint-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Somin Yuri",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babelify": "^10.0.0",
+    "gulp": "4.0.2",
+    "gulp-bro": "^2.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "1.2.1",
+    "live-alert-bp": "^1.0.0",
+    "live-alert-bp-formatter-eslint": "^1.0.0",
+    "loose-envify": "^1.4.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
