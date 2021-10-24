@@ -25,6 +25,8 @@ npm i live-alert-bp --save-dev
 
 ##  How to use
 
+[Example of how to establish a connection to the plugin «**Live Alert Browser Page**»](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+
 ```javascript
 const liveAlertBP = require("live-alert-bp");
 const liveAlert = new liveAlertBP({
