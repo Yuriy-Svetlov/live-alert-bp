@@ -65,7 +65,7 @@ function closeLiveAlert(milliseconds) {
 ##  Examples:
 
 * [NodeJs](https://github.com/semiromid/live-alert-bp/tree/master/documentation/nodejs) (To better understand how to use this tool, it is recommended that you get started.)
-* [Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/gulp)
+* [Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp)
 * Webpack
 * Grunt
 
