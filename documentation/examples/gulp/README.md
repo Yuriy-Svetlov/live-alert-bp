@@ -9,10 +9,13 @@
 
 1. [Without using a formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-without-using-formatter)
 
-2. [With using the `Sass` formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
+2. [Without using a formatter (old-pattern-gulp)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-without-using-formatter(old-pattern-gulp))
 
-3. [Alternative Example - 1 with using Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-alternative-1)
 
-4. [Example - 1 with using JS and ESlint](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-1)
+3. [With using the `Sass` formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-with-using-sass-formatter)
 
-5. [Example - 1 with using JS (webpack) and ESlint](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-2)
+4. [Alternative Example - 1 with using Gulp](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-alternative-1)
+
+5. [Example - 1 with using JS (babelify) and ESlint](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-1)
+
+6. [Example - 1 with using JS (webpack) and ESlint](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-2)
