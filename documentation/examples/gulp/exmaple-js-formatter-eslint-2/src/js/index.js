@@ -6,7 +6,7 @@ import Helper from './classes/Helper'
 
 //var a11nl = 123;
 
-//function fufu(){
+//function(){
 
 //}
 // --------------------------

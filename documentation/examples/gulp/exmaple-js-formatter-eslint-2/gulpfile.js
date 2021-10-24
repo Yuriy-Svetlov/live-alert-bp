@@ -25,29 +25,31 @@ function esLint() {
   .pipe(plumber({errorHandler: onError}))       
   .pipe(eslint())
   .pipe(eslint.format())
-  .pipe(eslint.format(formatterESLint))
+  .pipe(eslint.format(function(msgs){
+    liveAlertMessages.ESLint = liveAlertMessages.ESLint.concat(msgs);
+  }))
   .pipe(eslint.failAfterError());
 }
 
 
 function js() {
   return gulp.src(jsSrc)  
-    .pipe(plumber({errorHandler: onError}))   
-    .pipe(webpack({
-        mode: 'development',
-      }, compiler, function(err, stats) {
-
-        if (stats.hasErrors()) {
-          formatterWebpack(stats, 'Error');
-        }
+  .pipe(plumber({errorHandler: onError}))   
+  .pipe(webpack({
+      mode: 'development',
+    }, 
+    compiler, 
+    function(err, stats) {
+      if (stats.hasErrors()) {
+        formatterWebpack(stats, 'Error');
       }
-    ))    
-    .pipe(gulp.dest(jsDest));
+    }
+  ))    
+  .pipe(gulp.dest(jsDest));
 }
 
 
 function alert(cb){
-
   if(liveAlertMessages.ESLint.length > 0){
     const 
       userStyle = {}, 
@@ -70,7 +72,6 @@ function alert(cb){
 
 
 function onError(err){
-
   if(liveAlert.hasError() === false){
     if(err.plugin === ''){
       
@@ -82,9 +83,11 @@ function onError(err){
 
 
 function formatterWebpack(stats, labelname){
-  const info = stats.toJson();
+  const 
+    info = stats.toJson();
 
   let 
+    msgs = [],
     backgroundColor,
     color;
 
@@ -98,29 +101,22 @@ function formatterWebpack(stats, labelname){
   }
 
   info.errors.forEach(function(msg){
-
-    liveAlert.open([
-      {
-        label: {
-          style: { 
-              backgroundColor: backgroundColor, 
-              color: color 
-          }, 
-          name: labelname               
+    msgs.push({
+      label: {
+        style: { 
+            backgroundColor: backgroundColor, 
+            color: color 
         }, 
-        message: '<br>'
-          + '<span style="opacity: 0.5;">File:</span> ' + msg.moduleName + '<br>'
-          + '<span style="opacity: 0.5;">Loc:</span> ' + msg.loc + '<br>'
-          + '<span style="opacity: 0.5;">Reason:</span> ' + msg.message
-      }
-    ]);
-
+        name: labelname               
+      }, 
+      message: '<br>'
+        + '<span style="opacity: 0.5;">File:</span> ' + msg.moduleName + '<br>'
+        + '<span style="opacity: 0.5;">Loc:</span> ' + msg.loc + '<br>'
+        + '<span style="opacity: 0.5;">Reason:</span> ' + msg.message
+    });
   });
-}
 
-
-function formatterESLint(messages){
-  liveAlertMessages.ESLint = liveAlertMessages.ESLint.concat(messages);
+  liveAlert.open(msgs);
 }
 
 
