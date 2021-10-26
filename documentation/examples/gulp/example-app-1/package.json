@@ -1,0 +1,44 @@
+{
+  "name": "example-app-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Somin Yuri",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
+    "babelify": "10.0.0",
+    "blissify": "1.0.1",
+    "browserify-postcss": "0.4.0",
+    "cssnano": "5.0.8",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-bro": "2.0.0",
+    "gulp-eslint": "6.0.0",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-sass": "5.0.0",
+    "gulp-stylelint": "13.0.0",
+    "live-alert-bp": "^1.0.0",
+    "live-alert-bp-formatter-eslint": "^1.0.0",
+    "live-alert-bp-formatter-sass": "^1.0.0",
+    "live-alert-bp-formatter-stylelint": "^1.0.1",
+    "loose-envify": "1.4.0",
+    "postcss": "8.3.11",
+    "postcss-import": "12.0.1",
+    "postcss-scss": "4.0.1",
+    "sass": "1.43.3",
+    "stylelint": "14.0.0",
+    "stylelint-config-recommended-scss": "5.0.0",
+    "stylelint-scss": "4.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "7.12.1"
+  }
+}

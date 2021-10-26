@@ -20,6 +20,6 @@
 
 6. [Example - 2 JS (Webpack and ESlint)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-2)
 
-5. [Example App - 1 (Babelify, ESlint, Sass, Stylelint, HTMLmin)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/exmaple-js-formatter-eslint-3)
+5. [Example App - 1 (Babelify, ESlint, Sass, Stylelint, HTMLmin)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/example-app-1)
 
-You can take a look at other formatters, their APIs and examples. [Formaters](https://github.com/semiromid/live-alert-bp#formaters)
+You can take a look at formatters, and their APIs. [Formaters](https://github.com/semiromid/live-alert-bp#formaters)
