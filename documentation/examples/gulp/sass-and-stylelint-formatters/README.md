@@ -1,4 +1,4 @@
-# Example with using the Sass formatter (live-alert-bp)
+# Example with using Sass and Stylelint formatters (live-alert-bp)
 
 **1.** Download or copy [exmaple-with-using-sass-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/sass-and-stylelint-formatters)
 
