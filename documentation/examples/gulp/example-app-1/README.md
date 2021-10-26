@@ -11,7 +11,7 @@ npm install
 **3.** Double-clisk on **start.bat** or run in console 
 
 ```shell
-gulp watch
+gulp start
 ```
 In the console you should see the following message:
 
