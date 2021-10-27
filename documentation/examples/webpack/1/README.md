@@ -2,7 +2,7 @@
 
 
 
-**1.** Download or copy [example-app-1](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/webpack/1)
+**1.** Download or copy [example-1](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/webpack/1)
 
 **2.** Go to the directory with `webpack.config.js` and run the command in console: 
 
@@ -17,9 +17,9 @@ npm run startt
 ```
 In the console you should see the following message:
 
-> Server started | host: 127.0.0.1 | port: 8080
+> Server started | host: 127.0.0.1 | port: 8081
 
-**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+**4.** Set up a connection with the plugin. (host: 127.0.0.1 and port: 8081) [Example of how to establish a connection to a plugin](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
 
 **5.** Change a file `.js` or `.css` (make a syntax error).
 
