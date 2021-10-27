@@ -17,7 +17,7 @@
 
 5. [Example - 1 JS (Babelify and ESlint)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/js-formatter-eslint-1)
 
-6. [Example - 2 JS (Webpack and ESlint)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/js-formatter-eslint-2)
+6. [Example - 2 JS (Webpack and ESlint)](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/webpack-and-eslint-formatters)
 
 6. [Sass and Stylelint formatters](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/sass-and-stylelint-formatters)
 

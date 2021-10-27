@@ -1,6 +1,6 @@
 # Example - 2 with using the JS (webpack) and ESlint (live-alert-bp)
 
-**1.** Download or copy [exmaple-js-formatter-eslint-2](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/js-formatter-eslint-2)
+**1.** Download or copy [exmaple-js-formatter-eslint-2](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/webpack-and-eslint-formatters)
 
 **2.** Go to the directory with `gulpfile.js` and run the command in console: 
 
