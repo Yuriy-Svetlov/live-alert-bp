@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 
 
   // Register Task
-  grunt.registerTask('w', ['liveAlert:run', 'watch']);
+  grunt.registerTask('start', ['liveAlert:run', 'watch']);
 
 
   grunt.registerMultiTask('liveAlert', '', function() {

@@ -1,0 +1,26 @@
+{
+  "name": "grunt-live-alert-bp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Somin Yuri",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-jshint-event-reporter": "^1.0.3",
+    "jshint": "^2.12.0",
+    "jshint-stylish": "^2.2.1",
+    "live-alert-bp": "^1.0.1",
+    "live-alert-bp-formatter-jshint": "^1.0.0",
+    "load-grunt-tasks": "^5.1.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1"
+  }
+}
