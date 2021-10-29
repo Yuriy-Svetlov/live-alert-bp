@@ -1,7 +1,7 @@
 
 # Example with using JShint formatter (live-alert-bp)
 
-**1.** Download or copy [sass-stylelint-formatters](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/grunt/jshint-formatter)
+**1.** Download or copy [jshint-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/grunt/jshint-formatter)
 
 **2.** Go to the directory with `Gruntfile.js` and run the command in console: 
 

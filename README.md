@@ -71,7 +71,7 @@ function closeLiveAlert(milliseconds) {
 * [Webpack](https://github.com/semiromid/live-alert-bp/blob/master/documentation/examples/webpack/README.md)
 * [Grunt](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/grunt)
 
-sass-stylelint-formatters
+
 
 ## Formaters
 * [live-alert-bp-formatter-eslint](https://github.com/semiromid/live-alert-bp-formatter-eslint)
