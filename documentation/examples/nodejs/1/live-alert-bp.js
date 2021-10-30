@@ -3,7 +3,7 @@
 const chokidar = require('chokidar');
 
 const
-  liveAlertBP = require("E:\\Storage_3__DEV\\Developers\\WebDeveloper\\MyWorks\\JB\\projects\\live-alert-bp\\additions\\nodejs\\live-alert-bp"),
+  liveAlertBP = require("live-alert-bp"),
   dest = './dest/**/*.(js|css|php|html)',
   liveAlert = new liveAlertBP({
     host: '127.0.0.1',

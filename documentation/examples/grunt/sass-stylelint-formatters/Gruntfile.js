@@ -17,13 +17,13 @@ module.exports = function(grunt) {
     liveAlert: {
       run: {
         options: {
-            host: '127.0.0.1',
-            port: '8080'
+          host: '127.0.0.1',
+          port: '8080'
         }
       },    
       css: {
         options: {
-            reloadNotification: true
+          reloadNotification: true
         }        
       },
     },
