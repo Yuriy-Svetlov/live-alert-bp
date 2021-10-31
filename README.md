@@ -132,7 +132,7 @@ Running the server
 #### liveAlert.open(message)
 Call the alert panel on a web page. 
 
-`message` must be in the format
+`message` must be in the format You also can familar (you can also look at [Browser plugin API](https://live-alert-browser-page.com/documentation)):
 
 ```js
 [
