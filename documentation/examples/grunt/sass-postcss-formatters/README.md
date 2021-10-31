@@ -1,7 +1,7 @@
 
 # Example with using Sass and PostCSS formatters (live-alert-bp)
 
-**1.** Download or copy [sass-stylelint-formatters](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/grunt/sass-postcss-formatters)
+**1.** Download or copy [sass-postcss-formatters](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/grunt/sass-postcss-formatters)
 
 **2.** Go to the directory with `Gruntfile.js` and run the command in console: 
 
