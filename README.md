@@ -31,7 +31,7 @@ npm i live-alert-bp --save-dev
 const liveAlertBP = require("live-alert-bp");
 const liveAlert = new liveAlertBP({
   host: '127.0.0.1',
-   port: '8080'
+  port: '8080'
 });
 
 // Run Server
@@ -86,3 +86,7 @@ function closeLiveAlert(milliseconds) {
 * [grunt-jshint-event-reporter](https://github.com/semiromid/grunt-jshint-event-reporter)
 * [call-no-more-often-than](https://github.com/semiromid/call-no-more-often-than)
 * [grunt-sass-scss](https://github.com/semiromid/grunt-sass)
+
+
+##  API
+

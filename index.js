@@ -22,17 +22,17 @@ var
 class Server{
 
   constructor(options){
-	if(options.port === undefined){
-	  this.port = 8080;
-	}else{
-		this.port = options.port;
-	}
+		if(options.port === undefined){
+		  this.port = 8080;
+		}else{
+			this.port = options.port;
+		}
 
-	if(options.host === undefined){
-		this.host = '127.0.0.1';
-	}else{
-		this.host = options.host;
-	}		
+		if(options.host === undefined){
+			this.host = '127.0.0.1';
+		}else{
+			this.host = options.host;
+		}		
 
 	  this.wss = null;
 		this.ssl = options.ssl;
