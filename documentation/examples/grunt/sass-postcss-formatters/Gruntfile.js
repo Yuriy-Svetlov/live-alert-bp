@@ -3,9 +3,9 @@
 const 
   sass = require('sass'),
   liveAlertBP = require("live-alert-bp"),
-  liveAlertFormatterStylelint = require("live-alert-bp-formatter-stylelint"),
-  postcssOnAlert = require("postcss-on-alert"),
   liveAlertFormatterPostcss = require('live-alert-bp-formatter-postcss'),
+  liveAlertFormatterSass = require("live-alert-bp-formatter-sass"),
+  postcssOnAlert = require("postcss-on-alert"),
   callNoMoreOftenThan = require('call-no-more-often-than');
 
 var
@@ -33,8 +33,15 @@ module.exports = function(grunt) {
 
     sass: {
         options: {
+          onError: function(error){
+            liveAlert.open(
+              liveAlertFormatterSass(error)
+            );
+          },
+          sass: {
             implementation: sass,
             sourceMap: true
+          }
         },
         main: {
             files: {
@@ -49,15 +56,19 @@ module.exports = function(grunt) {
             onError: postcssOnError,
             parser: require('postcss-scss'),
             processors: [
-              require('stylelint')({formatter: formatterStylelint}), 
+              require('stylelint')({
+                customSyntax: 'postcss-scss',
+                failAfterError: true,
+                fix: false               
+              }), 
               postcssOnAlert({
-                  filterPlugins: [],
-                  filterTypeErrors: [],
-                  filterMessages: [],
-                  onAlert: function(messages){
-                      liveAlertMssages = liveAlertMssages.concat(messages);
-                  }
-              })           
+                filterPlugins: [],
+                filterTypeErrors: [],
+                filterMessages: [],
+                onAlert: function(messages){
+                  liveAlertMssages = liveAlertMssages.concat(messages);
+                }
+              })   
             ]
         },    
         src: ['src/scss/*.scss']    
@@ -87,10 +98,11 @@ module.exports = function(grunt) {
       },
       css: {
           files: ['src/scss/**/*.scss'],
-          tasks: ['sass', 'postcss:lint', 'liveAlert:css']
+          tasks: ['sass', 'postcss:lint', 'postcss:css', 'liveAlert:css']
       }        
     },
   });
+
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass-scss');
@@ -98,14 +110,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-stylelint');
 
 
-  // Register Task
   grunt.registerTask('start', ['liveAlert:run', 'watch']);
 
 
   grunt.registerMultiTask('liveAlert', '', function(){
-    if (grunt.fail.errorcount > 0 || grunt.fail.warncount > 0) {
-        return false;
-    }
 
     if(this.target === 'run'){
       liveAlert = new liveAlertBP(this.data.options);
@@ -113,37 +121,35 @@ module.exports = function(grunt) {
     }else  
     if(this.target === 'css'){
       if(liveAlertMssages.length > 0){
-          grunt.fail.warn('live_alert');
-          
-          liveAlert.open(
-              liveAlertFormatterPostcss(liveAlertMssages)
-          );
+        //grunt.fail.warn('live_alert');
+
+        liveAlert.open(
+          liveAlertFormatterPostcss(liveAlertMssages)
+        );
+      }else{
+        if (grunt.fail.errorcount === 0 && grunt.fail.warncount === 0) {
+          liveAlert.resetError();
+          liveAlert.close();
+
+          if(this.data.options.reloadNotification === true){
+            liveAlert.reloadNotification();
+          }        
+        }
       }
     }
 
     liveAlertMssages = [];
+    grunt.fail.errorcount = 0;
+    grunt.fail.warncount = 0;
   });
 
 
-  /*
-    https://postcss.org/api/#csssyntaxerror
-    https://postcss.org/api/#warning
-   */
   function postcssOnError(err) {
     callNoMoreOftenThan(2000).then(function(){
       liveAlert.open(
-        live_alert_formatter_postcss(err, {})
+        liveAlertFormatterPostcss(err)
       );
     }); 
-  }
-
-
-  function formatterStylelint(results, returnValue) {
-    liveAlert.open(
-      liveAlertFormatterStylelint(results)
-    ); 
-    
-    return results;
   }
 
 }

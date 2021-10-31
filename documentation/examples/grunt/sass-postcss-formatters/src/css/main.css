@@ -2,19 +2,19 @@
   color: blue;
 }
 
-.main7 {
+.main {
   width: 300px;
   background-color: blue;
 }
 
-.main {
+.m {
   width: 300px;
-  background-color: blue;
   background-color: orange;
 }
 
-.main {
+.m1 {
   width: 300px;
   background-color: blue;
-  background-color: orange;
 }
+
+/*# sourceMappingURL=main.css.map */
