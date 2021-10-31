@@ -114,7 +114,9 @@ Prints additional data to the console
 * Type: `ObjectJSON`
 * Default value: `undefined`
 
-To connect via SSL connection
+To connect via SSL connection.
+
+[options ssl](https://nodejs.org/api/tls.html#tls_tls_createsecurecontext_options)
 
 ```js
 ssl: { 
