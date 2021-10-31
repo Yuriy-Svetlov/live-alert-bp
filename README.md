@@ -31,7 +31,7 @@ npm i live-alert-bp --save-dev
 const liveAlertBP = require("live-alert-bp");
 const liveAlert = new liveAlertBP({
   host: '127.0.0.1',
-  port: '8080'
+   port: '8080'
 });
 
 // Run Server
@@ -90,3 +90,81 @@ function closeLiveAlert(milliseconds) {
 
 ##  API
 
+### Instance options (for run the server)
+
+`const liveAlert = new liveAlertBP({options});`
+
+#### options.host
+* Type: `String`
+* Default value: `127.0.0.1`
+
+#### options.port
+* Type: `String|Integer`
+* Default value: `8080`
+
+#### options.debug
+* Type: `boolean`
+* Default value: `false`
+
+Prints additional data to the console
+
+#### options.ssl
+* Type: `ObjectJSON`
+* Default value: `undefined`
+
+To connect via SSL connection
+
+```js
+ssl: { 
+  enable: true,
+    options: { 
+      key: './ssl/my.key',
+      cert: './ssl/my.crt'  
+  }               
+}
+```
+
+### Instance methods
+
+#### liveAlert.run()
+Running the server
+
+#### liveAlert.open(message)
+Call the alert panel on a web page. 
+
+`message` must be in the format
+
+```js
+[
+  { label: 'My label-1', message: 'My message-1.'}
+]
+```
+
+or
+
+```js
+[
+  {
+    label: {
+      style: { 
+        backgroundColor: '#ff0000', 
+        color: '#ffffff' 
+      }, 
+      name: 'Error'             
+    },
+    message: 'My message...'
+  }
+]
+```
+
+#### liveAlert.close()
+To clouse the alert panel on a web page.
+
+#### liveAlert.reloadNotification()
+Sound alert
+
+#### liveAlert.resetError()
+Reset errors
+
+#### liveAlert.hasError()
+Check if there are any errors
