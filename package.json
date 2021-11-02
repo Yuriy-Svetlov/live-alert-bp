@@ -1,6 +1,6 @@
 {
   "name": "live-alert-bp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This module is for the browser plugin «Live Alert Browser Page» — this is the browser plugin for real-time alert on the browser page during web development",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,8 @@
     "type": "git",
     "url": "https://github.com/semiromid/live-alert-bp"
   },
+  "homepage": "https://live-alert-browser-page.com",
+  "bugs": "https://github.com/semiromid/live-alert-bp/issues",
   "dependencies": {
     "ws": "^7.3.1"
   }
