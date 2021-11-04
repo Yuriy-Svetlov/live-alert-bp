@@ -1,6 +1,6 @@
 # Example with using Sass and Stylelint formatters (live-alert-bp)
 
-**1.** Download or copy [exmaple-with-using-sass-formatter](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/gulp/sass-and-stylelint-formatters)
+**1.** Download or copy [exmaple-with-using-sass-formatter](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/gulp/sass-and-stylelint-formatters)
 
 **2.** Go to the directory with `gulpfile.js` and run the command in console: 
 
@@ -17,7 +17,7 @@ In the console you should see the following message:
 
 > Server started | host: 127.0.0.1 | port: 8080
 
-**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
 
 **5.** Change a file `.sass` (make a syntax error).
 

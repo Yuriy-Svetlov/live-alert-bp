@@ -3,7 +3,7 @@
 When you already have the browser plugin «[Live Alert Browser Page](https://live-alert-browser-page.com/)» and this npm module is installed, you need to do the following.
 
 ## Steps
-**1.** Download or copy [exmaple-nodejs-1](https://github.com/semiromid/live-alert-bp/tree/master/documentation/examples/nodejs/1)
+**1.** Download or copy [exmaple-nodejs-1](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/nodejs/1)
 
 **2.** Go to the directory with the example and run the command in console: 
 
@@ -26,19 +26,19 @@ In the console you should see the following message:
    
    **4.2.** Enter in the fields 'Server Host' `127.0.0.1` and 'Port' `8080`. Click the "Save" button. Back to the main menu.
 
-![Live Alert Browser Page](https://raw.githubusercontent.com/semiromid/live-alert-bp/master/documentation/img/live-alert-browser-page-1.png)
+![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-1.png)
 
    **4.3.** Go to **Reload Notification**. Turn on 'Visual notification' and 'Sound notification'. Back to the main menu.
  
- ![Live Alert Browser Page](https://raw.githubusercontent.com/semiromid/live-alert-bp/master/documentation/img/live-alert-browser-page-2.png)
+ ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-2.png)
  
    **4.4.** Go to **Live Alert**. Turn on 'Visual notification' and turn on 'Sound notification'
 
- ![Live Alert Browser Page](https://raw.githubusercontent.com/semiromid/live-alert-bp/master/documentation/img/live-alert-browser-page-4.png)
+ ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-4.png)
 
    **4.5.** Turn on the browser plugin (At the very top.)
 
- ![Live Alert Browser Page](https://raw.githubusercontent.com/semiromid/live-alert-bp/master/documentation/img/live-alert-browser-page-3.png)
+ ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-3.png)
 
 **5.** Return to the project. Change the file `./dest/js/main.js` and save.
 
