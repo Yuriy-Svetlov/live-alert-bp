@@ -137,6 +137,9 @@ Running the server
 #### liveAlert.open(message)
 Call the alert panel on a web page. 
 
+\* The method in [live-reload-bp](https://github.com/Yuriy-Svetlov/live-reload-bp) has other name. See [live-reload-bp API](https://github.com/Yuriy-Svetlov/live-reload-bp#api).
+
+
 `message` must be in the format (you can also look at [Browser plugin API](https://live-alert-browser-page.com/documentation)):
 
 ```js
