@@ -4,11 +4,14 @@ const
   sass = require('sass'),
   liveAlertBP = require("live-alert-bp"),
   liveAlertFormatterStylelint = require("live-alert-bp-formatter-stylelint"),
-  liveAlertFormatterSass = require("live-alert-bp-formatter-sass");
+  liveAlertFormatterSass = require("live-alert-bp-formatter-sass"),
+  webServer = require('./web-server');
 
 var
   liveAlert,
   live_alert_messages = [];
+
+webServer();
 
 module.exports = function(grunt) {
 
@@ -110,21 +113,22 @@ module.exports = function(grunt) {
 
 
   grunt.registerMultiTask('liveAlert', '', function() {
-    if (grunt.fail.errorcount > 0 || grunt.fail.warncount > 0) {
-        return false;
-    }
-    
     if(this.target === 'run'){
       liveAlert = new liveAlertBP(this.data.options);
       liveAlert.run();
     }else{
-      liveAlert.resetError();
-      liveAlert.close();
+      if(grunt.fail.errorcount === 0 && grunt.fail.warncount === 0){
+        liveAlert.resetError();
+        liveAlert.close();
 
-      if(this.data.options.reloadNotification === true){
-        liveAlert.reloadNotification();
+        if(this.data.options.reloadNotification === true){
+          liveAlert.reloadNotification();
+        }
       }
     }
+
+    grunt.fail.errorcount = 0;
+    grunt.fail.warncount = 0;
   });
 
 
