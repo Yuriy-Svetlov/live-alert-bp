@@ -20,8 +20,8 @@ module.exports = {
     ignored: /node_modules/,
   },  
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dest'),
+    filename: 'index.js',
   },
   plugins: [
     new ESLintPlugin({ formatter: liveAlert.formatterESLint }),
@@ -48,9 +48,10 @@ module.exports = {
   },
   devServer: {
     liveReload: true,
+    port: 3000,
     hot: true,
     hotOnly: false,
     writeToDisk: false,
-    contentBase: './dist',   
+    contentBase: './dest',   
   },
 };

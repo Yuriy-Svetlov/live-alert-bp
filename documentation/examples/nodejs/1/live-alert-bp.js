@@ -1,6 +1,8 @@
 'use strict';
 
-const chokidar = require('chokidar');
+const 
+  chokidar = require('chokidar'),
+  webServer = require('./web-server');
 
 const
   liveAlertBP = require("live-alert-bp"),
@@ -38,3 +40,5 @@ function closeLiveAlert(milliseconds) {
     liveAlert.reloadNotification();     
   }, milliseconds);
 }
+
+webServer();

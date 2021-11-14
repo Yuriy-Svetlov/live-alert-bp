@@ -8,7 +8,7 @@ const
   path = require('path');
 
 const 
-  liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8081'}),
+  liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8080'}),
   liveAlertMsgs = {
     ESLint: []
   };

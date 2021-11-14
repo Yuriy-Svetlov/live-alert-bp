@@ -1,9 +1,9 @@
-# live-alert-bp how to use for NodeJs
+# Example - 1 (NodeJs) (live-alert-bp)
 
 When you already have the browser plugin «[Live Alert Browser Page](https://live-alert-browser-page.com/)» and this npm module is installed, you need to do the following.
 
 ## Steps
-**1.** Download or copy [exmaple-nodejs-1](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/nodejs/1)
+**1.** Download or copy [exmaple-1](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/nodejs/1)
 
 **2.** Go to the directory with the example and run the command in console: 
 
@@ -33,17 +33,16 @@ Open your browser: http://localhost:3000
 
    **5.3.** Go to **Reload Notification**. Turn on 'Visual notification' and 'Sound notification'. Back to the main menu.
  
- ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-2.png)
+![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-2.png)
  
    **5.4.** Go to **Live Alert**. Turn on 'Visual notification' and turn on 'Sound notification'
 
- ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-4.png)
+![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-4.png)
 
    **5.5.** Turn on the browser plugin (At the very top.)
 
- ![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-3.png)
+![Live Alert Browser Page](https://raw.githubusercontent.com/Yuriy-Svetlov/live-alert-bp/master/documentation/img/live-alert-browser-page-3.png)
 
-**6.** Return to the project. Change the file `./dest/js/main.js` and save.
+**6.** Return to the project. Change the file `./dest/js/index.js` and save. The **Live Alert Browser Page** panel will open (if you have enabled **Live Alert Browser Page**).
 
 **Congratulation!**
-You should hear a sound and see a visual notification on the browser page.

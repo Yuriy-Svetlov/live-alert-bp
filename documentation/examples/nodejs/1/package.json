@@ -9,6 +9,7 @@
   "author": "Somin Yuri",
   "license": "MIT",
   "devDependencies": {
+    "express": "^4.17.1",
     "chokidar": "^3.5.2",
     "live-alert-bp": "^1.0.4"
   }
