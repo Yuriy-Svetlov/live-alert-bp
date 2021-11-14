@@ -18,9 +18,12 @@ In the console you should see the following message:
 
 > Server started | host: 127.0.0.1 | port: 8080
 
-**4.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+**4.** 
+Open your browser: http://localhost:3000
 
-**5.** Change a file `.scss` (make an error or a warning).
+**5.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
+
+**6.** Change a file `.scss` (make an error or a warning).
 
 **Congratulation!**
 
