@@ -6,12 +6,14 @@ const
   liveAlertFormatterPostcss = require('live-alert-bp-formatter-postcss'),
   liveAlertFormatterSass = require("live-alert-bp-formatter-sass"),
   postcssOnAlert = require("postcss-on-alert"),
-  callNoMoreOftenThan = require('call-no-more-often-than');
+  callNoMoreOftenThan = require('call-no-more-often-than'),
+  webServer = require('./web-server');
 
 var
   liveAlert,
   liveAlertMssages = [];
 
+webServer();
 
 module.exports = function(grunt) {
 
@@ -85,7 +87,7 @@ module.exports = function(grunt) {
               expand: true,
               cwd: 'src',
               src: 'css/**/*.css',
-              dest: 'build'
+              dest: 'dest'
           }]
       }
     },
@@ -127,7 +129,7 @@ module.exports = function(grunt) {
           liveAlertFormatterPostcss(liveAlertMssages)
         );
       }else{
-        if (grunt.fail.errorcount === 0 && grunt.fail.warncount === 0) {
+        if(grunt.fail.errorcount === 0 && grunt.fail.warncount === 0) {
           liveAlert.resetError();
           liveAlert.close();
 

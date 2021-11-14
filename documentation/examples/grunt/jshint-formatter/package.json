@@ -17,6 +17,7 @@
     "jshint": "^2.12.0",
     "jshint-stylish": "^2.2.1",
     "live-alert-bp": "^1.0.1",
+    "express": "^4.17.1",
     "live-alert-bp-formatter-jshint": "^1.0.0",
     "load-grunt-tasks": "^5.1.0"
   },

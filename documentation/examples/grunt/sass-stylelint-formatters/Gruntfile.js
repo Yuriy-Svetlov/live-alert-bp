@@ -52,7 +52,7 @@ module.exports = function(grunt) {
           sourceMap: true
         }
       },
-      a: {
+      all: {
         files: [{
           expand: true,
           cwd: 'src/scss/',
@@ -63,10 +63,10 @@ module.exports = function(grunt) {
       },
 
       b: {       
-          files: {
-            'src/css/main.css': 'src/scss/main.scss'
-          }
-        }     
+        files: {
+          'src/css/main.css': 'src/scss/main.scss'
+        }
+      }     
     },
 
     postcss: {
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: 'css/**/*.css',
-          dest: 'build'
+          dest: 'dest'
         }]
       }
     },
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['src/scss/**/*.scss'],
-        tasks: ['stylelint', 'sass:a', 'postcss:css', 'liveAlert:css']
+        tasks: ['stylelint', 'sass:all', 'postcss:css', 'liveAlert:css']
       }        
     },
 
@@ -117,14 +117,14 @@ module.exports = function(grunt) {
       liveAlert = new liveAlertBP(this.data.options);
       liveAlert.run();
     }else{
-      if(grunt.fail.errorcount === 0 && grunt.fail.warncount === 0){
+      //if(grunt.fail.errorcount === 0 && grunt.fail.warncount === 0){
         liveAlert.resetError();
         liveAlert.close();
 
         if(this.data.options.reloadNotification === true){
           liveAlert.reloadNotification();
         }
-      }
+      //}
     }
 
     grunt.fail.errorcount = 0;
