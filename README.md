@@ -175,3 +175,7 @@ Reset errors
 
 #### liveAlert.hasError()
 Check if there are any errors
+
+##  Browser plugin API
+
+[API of browser plugin **Live Alert Browser Page**](https://live-alert-browser-page.com/documentation)
