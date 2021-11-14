@@ -1,16 +1,20 @@
-import Helper from './classes/Helper'
 
-// Make Warnings and Errors (As example)
-// --------------------------
-//import Helper from './classes/_____Helper'
 
-//var a11nl = 123;
+var $script1 = document.getElementById("script1");
 
-//function(){
+$script1.innerHTML = '<div style="width: 30%;" class="script1"></div>';
 
-//}
-// --------------------------
 
-var content = '<div>' + Helper.getCode() + '</div>';
+var $script2 = document.getElementById("script2");
 
-document.getElementById("root").innerHTML = content;
+$script2.innerHTML = '<div style="width: 50%;" class="script2"></div>';
+
+// Uncomment fot to make Warning
+// let s1; 
+
+// Uncomment for to make Error
+/*
+function(){
+
+}
+*/

@@ -12,3 +12,9 @@ function(){
 
 }
 */
+
+// Uncomment for make Warning
+//let w;
+
+// Uncomment for to make Error
+//function(){

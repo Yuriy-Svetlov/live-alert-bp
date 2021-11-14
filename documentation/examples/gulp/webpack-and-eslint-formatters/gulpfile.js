@@ -1,12 +1,14 @@
 
 const 
+  path = require('path'),
   gulp = require('gulp'),
   liveAlertBP = require("live-alert-bp"),
   liveAlertFormatterESlint = require("live-alert-bp-formatter-eslint"),
   plumber = require('gulp-plumber'),
   compiler = require('webpack'),  
   webpack = require('webpack-stream'),
-  eslint = require('gulp-eslint');
+  eslint = require('gulp-eslint'),
+  webServer = require('./web-server');
 
 const 
   liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8080'}),
@@ -17,7 +19,7 @@ const
 const 
   jsWatch = 'src/js/**/*.js',
   jsSrc = ['src/js/index.js'],
-  jsDest = 'build';
+  jsDest = 'dest';
 
 
 function esLint() {
@@ -37,6 +39,10 @@ function js() {
   .pipe(plumber({errorHandler: onError}))   
   .pipe(webpack({
       mode: 'development',
+      output: {
+        path: path.resolve(__dirname, 'dest'),
+        filename: 'index.js',
+      },
     }, 
     compiler, 
     function(err, stats) {
@@ -122,6 +128,7 @@ function formatterWebpack(stats, labelname){
 
 function watch(){
   liveAlert.run();
+  webServer();
 
   gulp.watch(jsWatch, gulp.series(esLint, js, alert));
 }
@@ -131,3 +138,4 @@ exports.esLint = esLint;
 exports.js = js;
 exports.watch = watch;
 exports.alert = alert;
+exports.start = gulp.series(esLint, js, watch);

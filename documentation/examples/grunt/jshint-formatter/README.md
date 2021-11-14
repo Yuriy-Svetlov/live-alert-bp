@@ -23,8 +23,6 @@ Open your browser: http://localhost:3000
 
 **5.** Set up a connection with the plugin. [Example of how to establish a connection to a plugin](https://github.com/Yuriy-Svetlov/live-alert-bp/tree/master/documentation/examples/%D1%81onnect_to_server)
 
-**6.** Change a file `.scss` (make an error or a warning).
+**6.** Change the file `src/js/index.js`, you will hear a sound and a visual notification. If you make an error or a warning, the **Live Alert Browser Page** panel will open (if you have enabled **Live Alert Browser Page**).
 
 **Congratulation!**
-
-You should hear a sound and see a visual notification on the browser page.

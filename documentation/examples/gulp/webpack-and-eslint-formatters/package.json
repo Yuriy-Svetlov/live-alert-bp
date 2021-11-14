@@ -9,6 +9,7 @@
   "author": "Somin Yuri",
   "license": "MIT",
   "devDependencies": {
+    "express": "^4.17.1",
     "gulp": "4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-plumber": "1.2.1",

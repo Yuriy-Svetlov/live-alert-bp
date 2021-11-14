@@ -6,7 +6,8 @@ const
   plumber = require('gulp-plumber'),
   bro = require('gulp-bro'),
   babelify = require('babelify'),
-  eslint = require('gulp-eslint');
+  eslint = require('gulp-eslint'),
+  webServer = require('./web-server');
 
 const 
   liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8080'}),
@@ -17,7 +18,7 @@ const
 const 
   jsWatch = 'src/js/**/*.js',
   jsSrc = ['src/js/index.js'],
-  jsDest = 'build';
+  jsDest = 'dest/js';
 
 
 function esLint() {
@@ -105,6 +106,7 @@ function formatter_ESLint(messages){
 
 function watch(){
   liveAlert.run();
+  webServer();
 
   gulp.watch(jsWatch, gulp.series(esLint, js, alert));
 }
@@ -114,3 +116,4 @@ exports.esLint = esLint;
 exports.js = js;
 exports.watch = watch;
 exports.alert = alert;
+exports.start = gulp.series(esLint, js, watch);

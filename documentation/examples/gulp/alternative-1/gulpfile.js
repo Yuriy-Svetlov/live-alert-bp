@@ -6,12 +6,13 @@ const
   plumber = require('gulp-plumber'),
   gulpSass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
-  cssnano = require('cssnano');
+  cssnano = require('cssnano'),
+  webServer = require('./web-server');
 
 const 
-  cssWatch = 'src/scss/*.scss',
+  cssWatch = 'src/scss/**/*.scss',
   cssSrc = ['src/scss/*.scss'],
-  cssDest = 'build/css';
+  cssDest = 'dest/css';
 
 const 
   liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8080'});
@@ -51,6 +52,7 @@ function onError(err){
 
 function watch(){
   liveAlert.run();
+  webServer();
 
   gulp.watch(cssWatch, gulp.series(css));
 }
@@ -58,3 +60,4 @@ function watch(){
 
 exports.css = css;
 exports.watch = watch;
+exports.start = gulp.series(css, watch);

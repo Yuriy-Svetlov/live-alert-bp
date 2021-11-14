@@ -14,7 +14,8 @@ const
   postcss = require('gulp-postcss'),
   cssnano = require('cssnano'),
   stylelint = require('gulp-stylelint'),
-  autoprefixer = require('gulp-autoprefixer');
+  autoprefixer = require('gulp-autoprefixer'),
+  webServer = require('./web-server');  
 
 const 
   liveAlert = new liveAlertBP({host: '127.0.0.1', port: '8080'}),
@@ -214,6 +215,7 @@ function formatterStylelint(results, returnValue) {
 
 function watch(){
   liveAlert.run();
+  webServer();
 
   gulp.watch(jsWatch, gulp.series(esLint, js, alert));
   gulp.watch(htmlWatch, gulp.series(html, js, alert));
